@@ -1,27 +1,27 @@
 {
   /*
-    工作台
-  */
+      工作台
+    */
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Atom One Dark",
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#2f7aeb7c"
   },
   /*
-    终端
-  */
+      终端
+    */
   "terminal.integrated.fontFamily": "\"MesloLGS NF\"",
   /*
-    文件
-  */
+      文件
+    */
   "files.autoSave": "afterDelay",
   /*
-    资源管理
-  */
+      资源管理
+    */
   "explorer.compactFolders": false,
   /*
-    编辑器
-  */
+      编辑器
+    */
   "editor.renderWhitespace": "all",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.renderLineHighlight": "gutter",
@@ -31,8 +31,8 @@
   "editor.autoClosingDelete": "always",
   "editor.autoClosingOvertype": "always",
   /*
-    文件类型
-  */
+      文件类型
+    */
   // .vue
   "[vue]": {
     "editor.tabSize": 2,
@@ -40,6 +40,11 @@
   },
   // .js
   "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // .jsx
+  "[javascriptreact]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -63,13 +68,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   /*
-    插件
-  */
+      插件
+    */
   // 插件单词检查
   "cSpell.userWords": ["vuex", "debbl", "pinia", "vant", "tabbar"],
   /*
-    other
-  */
+      other
+    */
   // search
   "search.followSymlinks": false,
   "search.exclude": {
