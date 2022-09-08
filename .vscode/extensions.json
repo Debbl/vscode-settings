@@ -1,10 +1,15 @@
 {
   "recommendations": [
+    // 系统
     "akamud.vscode-theme-onedark",
     "PKief.material-icon-theme",
+    // 格式化
     "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    // 框架
     "Vue.volar",
     "dsznajder.es7-react-js-snippets",
+    // 其他
     "alefragnani.project-manager",
     "CodeInChinese.EnglishChineseDictionary",
     "streetsidesoftware.code-spell-checker",
