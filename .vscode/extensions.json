@@ -1,11 +1,12 @@
 {
   "recommendations": [
-    "CodeInChinese.EnglishChineseDictionary",
     "akamud.vscode-theme-onedark",
-    "streetsidesoftware.code-spell-checker",
-    "dsznajder.es7-react-js-snippets",
     "PKief.material-icon-theme",
     "esbenp.prettier-vscode",
     "Vue.volar",
+    "dsznajder.es7-react-js-snippets",
+    "alefragnani.project-manager",
+    "CodeInChinese.EnglishChineseDictionary",
+    "streetsidesoftware.code-spell-checker",
   ]
 }
