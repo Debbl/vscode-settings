@@ -28,6 +28,7 @@
   "editor.renderLineHighlight": "gutter", // 突出选中行样式
   "editor.autoClosingDelete": "always", // 删除相邻的引号
   "editor.autoClosingOvertype": "always", // 自动输入闭合引号
+  "editor.showFoldingControls": "always", // 显示折叠图标
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 控制活动代码段是否阻止快速建议
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // 括号颜色
   /*
@@ -98,5 +99,5 @@
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
 }
