@@ -7,6 +7,7 @@
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#2f7aeb7c" // 选定时的颜色
   },
+  "workbench.sideBar.location": "right", // 侧边栏放在右边
   /*
    * 终端
    */
