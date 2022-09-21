@@ -32,23 +32,24 @@
   "editor.showFoldingControls": "always", // 显示折叠图标
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 控制活动代码段是否阻止快速建议
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // 括号颜色
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   /*
    * 文件类型
    */
   // .vue
   "[vue]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
   },
   // .js
   "[javascript]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
   },
   // .jsx
   "[javascriptreact]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
   },
   // .css
   "[css]": {
@@ -56,26 +57,41 @@
   },
   // .html
   "[html]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
   },
   // .json
   "[json]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
   },
   // .ts
   "[typescript]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
+  },
+  // .scss
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  // .tsx
+  "[typescriptreact]": {
+    "editor.tabSize": 2
   },
   /*
    * 插件
    */
   // 插件单词检查
-  "cSpell.userWords": ["vuex", "debbl", "pinia", "vant", "tabbar"],
+  "cSpell.userWords": [
+    "vuex",
+    "debbl",
+    "pinia",
+    "vant",
+    "tabbar",
+    "clsx",
+    "immer",
+    "tailwindCSS"
+  ],
   // ESLint
   "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
   /*
    * other
    */
@@ -100,5 +116,5 @@
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1
 }
