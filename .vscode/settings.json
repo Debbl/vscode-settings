@@ -9,6 +9,10 @@
   },
   "workbench.sideBar.location": "right", // 侧边栏放在右边
   /*
+   * window
+   */
+  "window.nativeTabs": true,
+  /*
    * 终端
    */
   "terminal.integrated.fontFamily": "\"MesloLGS NF\"", // 终端字体
@@ -35,7 +39,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.bracketPairsHorizontal": "active",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.cursorSmoothCaretAnimation": true, // 光标移动动画
   /*
    * 文件类型
    */
@@ -116,5 +123,6 @@
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "liveServer.settings.donotShowInfoMsg": true
 }
