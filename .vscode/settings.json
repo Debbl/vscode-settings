@@ -11,6 +11,7 @@
   /*
    * window
    */
+  "http.proxy": "http://127.0.0.1:7890", // 代理
   "window.nativeTabs": true,
   /*
    * 终端
@@ -37,12 +38,14 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 控制活动代码段是否阻止快速建议
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // 括号颜色
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true // eslint 格式
   },
-  "editor.guides.bracketPairs": "active",
-  "editor.guides.bracketPairsHorizontal": "active",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.guides.bracketPairs": "active", // 类括号显示多彩的竖线
+  "editor.guides.bracketPairsHorizontal": "active", // 类括号显示多彩的横线
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化方式
   "editor.cursorSmoothCaretAnimation": true, // 光标移动动画
+  "editor.fontFamily": "'JetBrainsMono', Menlo, Monaco, 'Courier New', monospace", // font
+  "editor.fontSize": 13, // font size
   /*
    * 文件类型
    */
@@ -82,6 +85,10 @@
   "[typescriptreact]": {
     "editor.tabSize": 2
   },
+  "[svg]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "jock.svg"
+  },
   /*
    * 插件
    */
@@ -99,6 +106,75 @@
   // ESLint
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  // Error Lens
+  "errorLens.enabledDiagnosticLevels": ["error"],
+  // Vim
+  // "vim.easymotion": true,
+  "vim.foldfix": true,
+  "vim.incsearch": true,
+  "vim.surround": true,
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.overrideCopy": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-u>": false
+  },
   /*
    * other
    */
@@ -124,5 +200,9 @@
     "**/yarn.lock": true
   },
   "window.zoomLevel": 1,
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  // "terminal.integrated.env.osx": {
+  //   "FIG_NEW_SESSION": "1"
+  // },
+  // "editor.accessibilitySupport": "off",
 }

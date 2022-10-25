@@ -1,17 +1,22 @@
 {
   "recommendations": [
     // 系统
-    "akamud.vscode-theme-onedark",
-    "PKief.material-icon-theme",
+    "akamud.vscode-theme-onedark", // 主题
+    "PKief.material-icon-theme", // icon
     // 格式化
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode", // prettier
+    "dbaeumer.vscode-eslint", // eslint
     // 框架
-    "Vue.volar",
-    "dsznajder.es7-react-js-snippets",
+    "Vue.volar", // vue
+    "dsznajder.es7-react-js-snippets", // es7 snippet
+    // git
+    "eamodio.gitlens", // gitlens
+    // vim
+    "vscodevim.vim", // vim
     // 其他
-    "alefragnani.project-manager",
-    "CodeInChinese.EnglishChineseDictionary",
-    "streetsidesoftware.code-spell-checker",
+    "alefragnani.project-manager", // project manger
+    "CodeInChinese.EnglishChineseDictionary", // 翻译
+    "streetsidesoftware.code-spell-checker", // 检查单词是否错误
+    "usernamehw.errorlens" // error lens
   ]
 }
