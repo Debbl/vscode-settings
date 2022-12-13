@@ -44,8 +44,10 @@
   "editor.guides.bracketPairsHorizontal": "active", // 类括号显示多彩的横线
   "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化方式
   "editor.cursorSmoothCaretAnimation": true, // 光标移动动画
-  "editor.fontFamily": "'JetBrainsMono', Menlo, Monaco, 'Courier New', monospace", // font
-  "editor.fontSize": 13, // font size
+  "editor.fontFamily": "'JetBrainsMono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  // system
+  "css.lint.unknownAtRules": "ignore",
   /*
    * 文件类型
    */
@@ -89,6 +91,9 @@
     "editor.tabSize": 2,
     "editor.defaultFormatter": "jock.svg"
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   /*
    * 插件
    */
@@ -101,7 +106,8 @@
     "tabbar",
     "clsx",
     "immer",
-    "tailwindCSS"
+    "tailwindCSS",
+    "reduxjs"
   ],
   // ESLint
   "eslint.alwaysShowStatus": true,
@@ -123,8 +129,12 @@
   ],
   // Error Lens
   "errorLens.enabledDiagnosticLevels": ["error"],
+  // highlight
+  "color-highlight.markerType": "dot-before",
+  // liveServer
+  "liveServer.settings.donotShowInfoMsg": true,
   // Vim
-  // "vim.easymotion": true,
+  "vim.easymotion": true,
   "vim.foldfix": true,
   "vim.incsearch": true,
   "vim.surround": true,
@@ -134,29 +144,33 @@
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
+      "before": ["j", "k"],
       "after": ["<Esc>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
     },
     {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
+      "before": ["H"],
+      "after": ["^"]
     },
     {
-      "before": ["J"],
-      "after": ["5", "j"]
+      "before": ["L"],
+      "after": ["$"]
     },
     {
-      "before": ["K"],
-      "after": ["5", "k"]
+      "before": ["g", "["],
+      "commands": ["editor.action.marker.prevInFiles"]
     },
     {
-      "before": ["leader", "s"],
+      "before": ["g", "]"],
+      "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["leader", "w"],
       "commands": ["workbench.action.files.save"]
     },
     {
@@ -164,8 +178,57 @@
       "commands": ["workbench.view.explorer"]
     },
     {
-      "before": ["leader", "t"],
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["leader", "t", "t"],
       "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["leader", "/"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // 关闭当前活跃的窗口
+    {
+      "before": ["leader", "t", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "s", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // 下一个 tab
+    {
+      "before": ["leader", "t", "n"],
+      "after": ["g", "t"]
+    },
+    {
+      "before": ["leader", "t", "p"],
+      "after": ["g", "T"]
+    },
+    // 水平分屏
+    {
+      "before": ["leader", "s", "h"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["leader", "s", "v"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["leader", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["leader", "d"],
+      "commands": ["editor.action.quickFix"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "/"],
+      "commands": ["editor.action.blockComment"]
     }
   ],
   "vim.leader": "<space>",
@@ -199,10 +262,25 @@
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  "window.zoomLevel": 1,
-  "liveServer.settings.donotShowInfoMsg": true,
-  // "terminal.integrated.env.osx": {
-  //   "FIG_NEW_SESSION": "1"
-  // },
-  // "editor.accessibilitySupport": "off",
+  "files.associations": {
+    "*.ttss": "css",
+    "*.wxss": "css",
+    "*.sjs": "javascript",
+    "*.ttml": "ttml",
+    "*.wxml": "ttml",
+    "*.sk": "ttml"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.byte-ide": true
+  },
+  "emmet.includeLanguages": {
+    "sjs": "javascript"
+  },
+  "window.zoomLevel": 1
 }
