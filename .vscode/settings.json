@@ -43,7 +43,7 @@
   "editor.guides.bracketPairs": "active", // 类括号显示多彩的竖线
   "editor.guides.bracketPairsHorizontal": "active", // 类括号显示多彩的横线
   "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化方式
-  "editor.cursorSmoothCaretAnimation": true, // 光标移动动画
+  "editor.cursorSmoothCaretAnimation": "on", // 光标移动动画
   "editor.fontFamily": "'JetBrainsMono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 13,
   // system
