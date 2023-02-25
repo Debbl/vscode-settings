@@ -17,6 +17,7 @@
     "alefragnani.project-manager", // project manger
     "CodeInChinese.EnglishChineseDictionary", // 翻译
     "streetsidesoftware.code-spell-checker", // 检查单词是否错误
-    "usernamehw.errorlens" // error lens
+    "usernamehw.errorlens", // error lens
+    "naumovs.color-highlight" // color-highlight
   ]
 }
