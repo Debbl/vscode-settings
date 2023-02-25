@@ -48,42 +48,34 @@
   "editor.fontSize": 13,
   // system
   "css.lint.unknownAtRules": "ignore",
+  "emmet.showSuggestionsAsSnippets": true,
   /*
    * 文件类型
    */
-  // .vue
   "[vue]": {
     "editor.tabSize": 2
   },
-  // .js
   "[javascript]": {
     "editor.tabSize": 2
   },
-  // .jsx
   "[javascriptreact]": {
     "editor.tabSize": 2
   },
-  // .css
   "[css]": {
     "editor.tabSize": 2
   },
-  // .html
   "[html]": {
     "editor.tabSize": 2
   },
-  // .json
   "[json]": {
     "editor.tabSize": 2
   },
-  // .ts
   "[typescript]": {
     "editor.tabSize": 2
   },
-  // .scss
   "[scss]": {
     "editor.tabSize": 2
   },
-  // .tsx
   "[typescriptreact]": {
     "editor.tabSize": 2
   },
@@ -110,7 +102,6 @@
     "reduxjs"
   ],
   // ESLint
-  "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
@@ -160,6 +151,10 @@
     {
       "before": ["L"],
       "after": ["$"]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
     },
     {
       "before": ["g", "["],
@@ -291,9 +286,6 @@
     "**/Thumbs.db": true,
     "**/.byte-ide": true
   },
-  "emmet.includeLanguages": {
-    "sjs": "javascript"
-  },
   "window.zoomLevel": 1,
-  "git.confirmSync": false
 }
+
