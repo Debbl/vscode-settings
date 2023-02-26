@@ -131,8 +131,6 @@
 
   "errorLens.enabledDiagnosticLevels": ["error"],
 
-  "color-highlight.markerType": "dot-before",
-
   "liveServer.settings.donotShowInfoMsg": true,
 
   "indentRainbow.indicatorStyle": "light",
@@ -152,17 +150,15 @@
     "<C-u>": false
   },
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
-  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.normal": ["#5f8af7", "#EEEEEE"],
+  "vim.statusBarColors.insert": "#5F8Aa7",
   "vim.statusBarColors.visual": "#B48EAD",
   "vim.statusBarColors.visualline": "#B48EAD",
   "vim.statusBarColors.visualblock": "#A3BE8C",
   "vim.statusBarColors.replace": "#D08770",
   "vim.statusBarColors.commandlineinprogress": "#007ACC",
-  "vim.statusBarColors.searchinprogressmode": "#007ACC",
-  "vim.statusBarColors.easymotionmode": "#007ACC",
-  "vim.statusBarColors.easymotioninputmode": "#007ACC",
-  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007Aaa",
+  "vim.statusBarColors.surroundinputmode": "#007A00",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -318,4 +314,5 @@
   "window.zoomLevel": 1,
   "git.confirmSync": false,
   "Codegeex.Privacy": false,
+  "color-highlight.markerType": "dot-before"
 }
