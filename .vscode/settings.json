@@ -5,7 +5,12 @@
   "workbench.iconTheme": "material-icon-theme", // 文件图标主题
   "workbench.colorTheme": "Atom One Dark", // 颜色主题
   "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#2f7aeb7c" // 选定时的颜色
+    "editor.lineHighlightBackground": "#2f7aeb7c",
+    "statusBar.background": "#B48EAD",
+    "statusBar.noFolderBackground": "#B48EAD",
+    "statusBar.debuggingBackground": "#B48EAD",
+    "statusBar.foreground": "#434C5E",
+    "statusBar.debuggingForeground": "#434C5E"
   },
   "workbench.sideBar.location": "right", // 侧边栏放在右边
 
@@ -55,6 +60,7 @@
   // system
   "css.lint.unknownAtRules": "ignore",
   "emmet.showSuggestionsAsSnippets": true,
+  "git.autofetch": true,
 
   // #region 文件类型
   "[vue]": {
@@ -129,7 +135,8 @@
 
   "liveServer.settings.donotShowInfoMsg": true,
 
-  "vim.easymotion": true,
+  "indentRainbow.indicatorStyle": "light",
+
   "vim.foldfix": true,
   "vim.incsearch": true,
   "vim.surround": true,
@@ -144,6 +151,18 @@
     "<C-f>": false,
     "<C-u>": false
   },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -254,7 +273,7 @@
     }
   ],
   // #endregion
-  
+
   /*
    * other
    */
@@ -296,5 +315,7 @@
     "**/Thumbs.db": true,
     "**/.byte-ide": true
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "git.confirmSync": false,
+  "Codegeex.Privacy": false,
 }
