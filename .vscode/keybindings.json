@@ -10,16 +10,6 @@
     "command": "-extension.liveServer.goOffline",
     "when": "editorTextFocus"
   },
-  {
-    "key": "ctrl+n",
-    "command": "explorer.newFile",
-    "when": "explorerViewletFocus"
-  },
-  {
-    "key": "ctrl+shift+n",
-    "command": "explorer.newFolder",
-    "when": "explorerViewletFocus"
-  },
 
   // 移动到下一个建议
   {
@@ -32,6 +22,18 @@
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+
+  // quickOpen
+  {
+    "key": "shift+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
+  },
+  {
+    "key": "shift+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
   },
 
   // 将光标向上动1屏
@@ -108,4 +110,3 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   }
 ]
-
