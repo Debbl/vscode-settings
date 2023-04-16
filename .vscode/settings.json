@@ -101,15 +101,19 @@
 
   // #region 插件
   "cSpell.userWords": [
-    "vuex",
-    "debbl",
-    "pinia",
-    "vant",
-    "tabbar",
+    "aimant",
+    "aiwan",
     "clsx",
+    "debbl",
+    "echarts",
     "immer",
+    "pinia",
+    "reduxjs",
+    "tabbar",
     "tailwindCSS",
-    "reduxjs"
+    "vant",
+    "vuex",
+    "zustand"
   ],
 
   "eslint.format.enable": true,
@@ -133,8 +137,6 @@
 
   "liveServer.settings.donotShowInfoMsg": true,
 
-  "indentRainbow.indicatorStyle": "light",
-
   "vim.foldfix": true,
   "vim.incsearch": true,
   "vim.surround": true,
@@ -144,19 +146,12 @@
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.overrideCopy": true,
+  "vim.easymotion": true,
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
     "<C-u>": false
   },
-  "vim.statusBarColorControl": true, 
-  "vim.statusBarColors.normal": ["#282C34", "#ABB2BF"],
-  "vim.statusBarColors.insert": ["#1976D2", "#F5F5F5"],
-  "vim.statusBarColors.visual": ["#6A1B9A", "#F5F5F5"],
-  "vim.statusBarColors.replace": "#E06C75",
-  "vim.statusBarColors.commandlineinprogress": "#007ACC",
-  "vim.statusBarColors.searchinprogressmode": "#007Aaa",
-  "vim.statusBarColors.surroundinputmode": "#98C379",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
@@ -193,7 +188,7 @@
       "commands": ["workbench.action.files.save"]
     },
     {
-      "before": ["leader", "p"],
+      "before": ["leader", "f"],
       "commands": ["prettier.forceFormatDocument"]
     },
     {
@@ -250,6 +245,10 @@
     {
       "before": ["leader", "d"],
       "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["leader", "l", "l"],
+      "commands": ["turboConsoleLog.displayLogMessage"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -321,8 +320,6 @@
   },
   "window.zoomLevel": 1,
   "git.confirmSync": false,
-  "Codegeex.Privacy": false,
-  "color-highlight.markerType": "dot-before"
+  "color-highlight.markerType": "dot-before",
+  "git.enableSmartCommit": true
 }
-
-

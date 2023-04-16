@@ -26,14 +26,21 @@
 
   // quickOpen
   {
-    "key": "shift+j",
+    "key": "alt+j",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
   },
   {
-    "key": "shift+k",
+    "key": "alt+k",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inputFocus && !editorFocus && !findInputFocussed && !findWidgetVisible"
+  },
+
+  // terminal
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
   },
 
   // 将光标向上动1屏
