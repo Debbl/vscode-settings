@@ -5,12 +5,7 @@
   "workbench.iconTheme": "material-icon-theme", // 文件图标主题
   "workbench.colorTheme": "Atom One Dark", // 颜色主题
   "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#2f7aeb7c",
-    "statusBar.background": "#6A1B9A",
-    "statusBar.noFolderBackground": "#6A1B9A",
-    "statusBar.debuggingBackground": "#6A1B9A",
-    "statusBar.foreground": "#F5F5F5",
-    "statusBar.debuggingForeground": "#F5F5F5"
+    "editor.lineHighlightBackground": "#2f7aeb7c"
   },
   "workbench.sideBar.location": "right", // 侧边栏放在右边
 
@@ -38,6 +33,7 @@
   /*
    * 编辑器
    */
+  "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "all", // 显示空格符号
   "explorer.confirmDelete": false, // 删除文件时是否确认
   "editor.formatOnSave": true, // 保存时格式化
@@ -97,12 +93,17 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
   // #endregion
 
   // #region 插件
   "cSpell.userWords": [
     "aimant",
     "aiwan",
+    "antd",
     "clsx",
     "debbl",
     "echarts",
@@ -115,8 +116,6 @@
     "vuex",
     "zustand"
   ],
-
-  "eslint.format.enable": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
@@ -159,6 +158,14 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["g", "k"]
+    },
     {
       "before": ["x"],
       "after": ["\"", "_", "x"]
@@ -321,5 +328,4 @@
   "window.zoomLevel": 1,
   "git.confirmSync": false,
   "color-highlight.markerType": "dot-before",
-  "git.enableSmartCommit": true
 }
