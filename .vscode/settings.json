@@ -12,18 +12,14 @@
   /*
    * window
    */
-  "http.proxy": "http://127.0.0.1:7890", // 代理
   "window.nativeTabs": true,
+  "http.proxy": "http://127.0.0.1:7890",
 
   /*
    * 终端
    */
-  "terminal.integrated.fontFamily": "\"MesloLGS NF\"", // 终端字体
-
-  /*
-   * 文件
-   */
-  "files.autoSave": "afterDelay", // 文件自动保存
+  "terminal.integrated.fontFamily": "'MesloLGS NF'", // 终端字体
+  "terminal.integrated.enableImages": true, // 文件自动保存
 
   /*
    * 资源管理
@@ -33,6 +29,7 @@
   /*
    * 编辑器
    */
+  "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "all", // 显示空格符号
   "explorer.confirmDelete": false, // 删除文件时是否确认
@@ -49,18 +46,44 @@
   "editor.guides.bracketPairs": "active", // 类括号显示多彩的竖线
   "editor.guides.bracketPairsHorizontal": "active", // 类括号显示多彩的横线
   "editor.defaultFormatter": "dbaeumer.vscode-eslint", // 默认格式化方式
-  "editor.cursorSmoothCaretAnimation": "on", // 光标移动动画
-  "editor.fontFamily": "'JetBrainsMono', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 13,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontSize": 14,
+  "editor.colorDecorators": false, // CSS 颜色
+  "editor.accessibilitySupport": "on",
+  "editor.fontFamily": "'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
+
+  // disable audio
+  "audioCues.diffLineDeleted": "off",
+  "audioCues.diffLineInserted": "off",
+  "audioCues.diffLineModified": "off",
+  "audioCues.chatResponsePending": "off",
+  "audioCues.lineHasBreakpoint": "off",
+  "audioCues.lineHasError": "off",
+  "audioCues.lineHasInlineSuggestion": "off",
+  "audioCues.noInlayHints": "off",
+  "audioCues.lineHasFoldedArea": "off",
+  "audioCues.notebookCellFailed": "off",
+  "audioCues.taskCompleted": "off",
+  "audioCues.onDebugBreak": "off",
+  "audioCues.taskFailed": "off",
+  "audioCues.terminalCommandFailed": "off",
+  "audioCues.terminalQuickFix": "off",
+  "audioCues.notebookCellCompleted": "off",
 
   // system
   "css.lint.unknownAtRules": "ignore",
   "emmet.showSuggestionsAsSnippets": true,
   "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "files.autoSave": "afterDelay",
+
+  "json.schemaDownload.enable": true,
 
   // #region 文件类型
   "[vue]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascript]": {
     "editor.tabSize": 2
@@ -101,12 +124,17 @@
 
   // #region 插件
   "cSpell.userWords": [
+    "ahooks",
     "aimant",
     "aiwan",
     "antd",
+    "Attributify",
+    "bumpp",
     "clsx",
+    "daisyui",
     "debbl",
     "echarts",
+    "iconify",
     "immer",
     "pinia",
     "reduxjs",
@@ -116,6 +144,8 @@
     "vuex",
     "zustand"
   ],
+  "eslint.format.enable": true,
+  // "eslint.experimental.useFlatConfig": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
@@ -132,24 +162,28 @@
     "json5"
   ],
 
+  // Error Lens
   "errorLens.enabledDiagnosticLevels": ["error"],
 
+  // Live Server
   "liveServer.settings.donotShowInfoMsg": true,
 
+  // Color Highlight
+  "color-highlight.markerType": "dot-before",
+
+  // Vim
   "vim.foldfix": true,
   "vim.incsearch": true,
   "vim.surround": true,
-  "vim.sneak": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.overrideCopy": true,
-  "vim.easymotion": true,
   "vim.handleKeys": {
-    "<C-a>": false,
-    "<C-f>": false,
-    "<C-u>": false
+    // "<C-a>": false,
+    // "<C-f>": false,
+    // "<C-u>": false
   },
   "vim.insertModeKeyBindings": [
     {
@@ -160,10 +194,18 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["J"],
-      "after": ["g", "j"]
+      "after": ["5", "j"]
     },
     {
       "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
       "after": ["g", "k"]
     },
     {
@@ -177,10 +219,6 @@
     {
       "before": ["L"],
       "after": ["$"]
-    },
-    {
-      "before": ["u"],
-      "commands": ["undo"]
     },
     {
       "before": ["g", "["],
@@ -270,6 +308,10 @@
     {
       "before": ["L"],
       "after": ["$", "h"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
@@ -325,7 +367,5 @@
     "**/Thumbs.db": true,
     "**/.byte-ide": true
   },
-  "window.zoomLevel": 1,
-  "git.confirmSync": false,
-  "color-highlight.markerType": "dot-before",
+  "window.zoomLevel": 1
 }
