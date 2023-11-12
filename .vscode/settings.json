@@ -10,7 +10,6 @@
   "workbench.colorTheme": "Atom One Dark",
   "workbench.editor.tabCloseButton": "left",
   "workbench.list.smoothScrolling": true,
-  "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
 
@@ -327,4 +326,5 @@
     "scminput": false
   },
 }
+
 
