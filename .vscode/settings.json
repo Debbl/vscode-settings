@@ -2,17 +2,24 @@
   /*
    * 工作台
    */
-  "workbench.iconTheme": "material-icon-theme", // 文件图标主题
-  "workbench.colorTheme": "Atom One Dark", // 颜色主题
+  "workbench.iconTheme": "material-icon-theme", // 颜色主题
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#2f7aeb7c"
   },
   "workbench.sideBar.location": "right", // 侧边栏放在右边
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.editor.tabCloseButton": "left",
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.indent": 10,
 
   /*
    * window
    */
+  "window.dialogStyle": "custom",
   "window.nativeTabs": true,
+  "window.zoomLevel": 1,
   "http.proxy": "http://127.0.0.1:7890",
 
   /*
@@ -20,6 +27,12 @@
    */
   "terminal.integrated.fontFamily": "'MesloLGS NF'", // 终端字体
   "terminal.integrated.enableImages": true, // 文件自动保存
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+  "scm.diffDecorationsGutterWidth": 2,
 
   /*
    * 资源管理
@@ -29,19 +42,24 @@
   /*
    * 编辑器
    */
+  "editor.stickyScroll.enabled": true,
+  "editor.hover.sticky": true,
+  "editor.accessibilitySupport": "off",
+  "editor.find.addExtraSpaceOnTop": false,
   "editor.inlineSuggest.enabled": true,
+  "editor.renderLineHighlight": "gutter",
   "editor.lineNumbers": "interval",
-  "editor.renderWhitespace": "all", // 显示空格符号
+  "editor.renderWhitespace": "all",
   "explorer.confirmDelete": false, // 删除文件时是否确认
-  "editor.formatOnSave": true, // 保存时格式化
-  "editor.renderLineHighlight": "gutter", // 突出选中行样式
+  "editor.formatOnSave": true, // 突出选中行样式
   "editor.autoClosingDelete": "always", // 删除相邻的引号
   "editor.autoClosingOvertype": "always", // 自动输入闭合引号
   "editor.showFoldingControls": "always", // 显示折叠图标
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 控制活动代码段是否阻止快速建议
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // 括号颜色
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true // eslint 格式
+    "source.fixAll.eslint": "explicit", // eslint autoFix
+    "source.organizeImports": "never"
   },
   "editor.guides.bracketPairs": "active", // 类括号显示多彩的竖线
   "editor.guides.bracketPairsHorizontal": "active", // 类括号显示多彩的横线
@@ -49,26 +67,8 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontSize": 14,
   "editor.colorDecorators": false, // CSS 颜色
-  "editor.accessibilitySupport": "on",
-  "editor.fontFamily": "'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
-
-  // disable audio
-  "audioCues.diffLineDeleted": "off",
-  "audioCues.diffLineInserted": "off",
-  "audioCues.diffLineModified": "off",
-  "audioCues.chatResponsePending": "off",
-  "audioCues.lineHasBreakpoint": "off",
-  "audioCues.lineHasError": "off",
-  "audioCues.lineHasInlineSuggestion": "off",
-  "audioCues.noInlayHints": "off",
-  "audioCues.lineHasFoldedArea": "off",
-  "audioCues.notebookCellFailed": "off",
-  "audioCues.taskCompleted": "off",
-  "audioCues.onDebugBreak": "off",
-  "audioCues.taskFailed": "off",
-  "audioCues.terminalCommandFailed": "off",
-  "audioCues.terminalQuickFix": "off",
-  "audioCues.notebookCellCompleted": "off",
+  "editor.fontFamily": "'JetBrains Mono NL', 'Monaspace Neon', Menlo, Monaco, 'Courier New', monospace",
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
 
   // system
   "css.lint.unknownAtRules": "ignore",
@@ -76,51 +76,7 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "files.autoSave": "afterDelay",
-
-  "json.schemaDownload.enable": true,
-
-  // #region 文件类型
-  "[vue]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascript]": {
-    "editor.tabSize": 2
-  },
-  "[javascriptreact]": {
-    "editor.tabSize": 2
-  },
-  "[css]": {
-    "editor.tabSize": 2
-  },
-  "[html]": {
-    "editor.tabSize": 2
-  },
-  "[json]": {
-    "editor.tabSize": 2
-  },
-  "[typescript]": {
-    "editor.tabSize": 2
-  },
-  "[scss]": {
-    "editor.tabSize": 2
-  },
-  "[typescriptreact]": {
-    "editor.tabSize": 2
-  },
-  "[svg]": {
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "jock.svg"
-  },
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  },
-  "[python]": {
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  // #endregion
+  "files.autoSave": "onFocusChange",
 
   // #region 插件
   "cSpell.userWords": [
@@ -128,9 +84,12 @@
     "aimant",
     "aiwan",
     "antd",
+    "antfu",
     "Attributify",
+    "Bilibili",
     "bumpp",
     "clsx",
+    "codesandbox",
     "daisyui",
     "debbl",
     "echarts",
@@ -138,14 +97,21 @@
     "immer",
     "pinia",
     "reduxjs",
+    "Sandpack",
+    "Spandpack",
     "tabbar",
     "tailwindCSS",
+    "umami",
+    "unocss",
     "vant",
+    "vueuse",
     "vuex",
     "zustand"
   ],
+  "prettier.quoteProps": "consistent",
+  "prettier.trailingComma": "all",
   "eslint.format.enable": true,
-  // "eslint.experimental.useFlatConfig": true,
+  "eslint.experimental.useFlatConfig": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
@@ -157,9 +123,12 @@
     "vue",
     "html",
     "markdown",
+    "mdx",
     "json",
     "jsonc",
-    "json5"
+    "json5",
+    "yaml",
+    "yml"
   ],
 
   // Error Lens
@@ -294,6 +263,10 @@
     {
       "before": ["leader", "l", "l"],
       "commands": ["turboConsoleLog.displayLogMessage"]
+    },
+    {
+      "before": ["leader", "r", "r"],
+      "commands": ["workbench.action.newWindowTab"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -326,15 +299,7 @@
   ],
   // #endregion
 
-  /*
-   * other
-   */
-  // search
-  "search.followSymlinks": false, // 控制搜索时是否遵循符号链接
   "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "**/*.code-search": true,
     "**/.git": true,
     "**/.github": true,
     "**/.nuxt": true,
@@ -342,30 +307,24 @@
     "**/.pnpm": true,
     "**/.vscode": true,
     "**/.yarn": true,
+    "**/bower_components": true,
     "**/dist/**": true,
     "**/logs": true,
+    "**/node_modules": true,
     "**/out/**": true,
     "**/package-lock.json": true,
     "**/pnpm-lock.yaml": true,
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  "files.associations": {
-    "*.ttss": "css",
-    "*.wxss": "css",
-    "*.sjs": "javascript",
-    "*.ttml": "ttml",
-    "*.wxml": "ttml",
-    "*.sk": "ttml"
+  /*
+   * other
+   */
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
   },
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/.byte-ide": true
-  },
-  "window.zoomLevel": 1
 }
+
