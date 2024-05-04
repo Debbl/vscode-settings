@@ -19,6 +19,8 @@
   /*
    * window
    */
+  "window.zoomLevel": 1,
+  "window.customTitleBarVisibility": "never",
   "window.dialogStyle": "custom",
   "window.nativeTabs": true,
   "http.proxy": "http://127.0.0.1:7890",
@@ -388,5 +390,4 @@
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  "window.zoomLevel": 1,
 }
