@@ -12,13 +12,15 @@
   "workbench.list.smoothScrolling": true,
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  // "workbench.fontAliasing": "antialiased",
+  "workbench.tree.enableStickyScroll": false,
 
   /*
    * window
    */
   "window.dialogStyle": "custom",
   "window.nativeTabs": true,
-  "window.zoomLevel": 1,
   "http.proxy": "http://127.0.0.1:7890",
 
   /*
@@ -27,21 +29,17 @@
   "terminal.integrated.fontFamily": "'MesloLGS NF'", // 终端字体
   "terminal.integrated.enableImages": true, // 文件自动保存
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
   "scm.diffDecorationsGutterWidth": 2,
-
-  /*
-   * 资源管理
-   */
-  "explorer.compactFolders": false, // 查看文件树时不合并
+  "terminal.integrated.smoothScrolling": true, // 查看文件树时不合并
 
   /*
    * 编辑器
    */
-  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.enabled": false,
+  "explorer.confirmDelete": false, // 删除文件时是否确认
   "editor.hover.sticky": true,
   "editor.accessibilitySupport": "off",
   "editor.find.addExtraSpaceOnTop": false,
@@ -49,8 +47,7 @@
   "editor.renderLineHighlight": "gutter",
   "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "all",
-  "explorer.confirmDelete": false, // 删除文件时是否确认
-  "editor.formatOnSave": true, // 突出选中行样式
+  "editor.formatOnSave": false, // 保存时自动格式化
   "editor.autoClosingDelete": "always", // 删除相邻的引号
   "editor.autoClosingOvertype": "always", // 自动输入闭合引号
   "editor.showFoldingControls": "always", // 显示折叠图标
@@ -66,16 +63,26 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontSize": 14,
   "editor.colorDecorators": false, // CSS 颜色
-  "editor.fontFamily": "'JetBrains Mono NL', 'Monaspace Neon', Menlo, Monaco, 'Courier New', monospace",
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.fontFamily": "'Monaspace Neon', 'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
+  // "editor.formatOnSaveMode": "modificationsIfAvailable",
+  // "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.smoothScrolling": true,
+  // "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+
+  // hidden primary side bar
 
   // system
   "css.lint.unknownAtRules": "ignore",
-  "emmet.showSuggestionsAsSnippets": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "files.autoSave": "onFocusChange",
+
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.inlayHints.enabled": "offUnlessPressed"
+  },
 
   // #region 插件
   "cSpell.userWords": [
@@ -100,17 +107,19 @@
     "Spandpack",
     "tabbar",
     "tailwindCSS",
+    "tsup",
+    "typecheck",
     "umami",
     "unocss",
+    "unplugin",
     "vant",
     "vueuse",
     "vuex",
     "zustand"
   ],
   "prettier.quoteProps": "consistent",
-  "prettier.trailingComma": "all",
   "eslint.format.enable": true,
-  "eslint.experimental.useFlatConfig": true,
+  // "eslint.experimental.useFlatConfig": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
@@ -127,7 +136,8 @@
     "jsonc",
     "json5",
     "yaml",
-    "yml"
+    "yml",
+    "toml"
   ],
 
   // Error Lens
@@ -139,7 +149,13 @@
   // Color Highlight
   "color-highlight.markerType": "dot-before",
 
+  // rust-analyzer
+  "rust-analyzer.checkOnSave": false,
+
   // Vim
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "vim.foldfix": true,
   "vim.incsearch": true,
   "vim.surround": true,
@@ -148,6 +164,12 @@
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.overrideCopy": true,
+  // "vim.visualstar": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 100,
+  "vim.highlightedyank.color": "rgba(82, 146, 247, 0.4)",
+  "vim.replaceWithRegister": true,
+  // "vim.flash.enable": true,
   "vim.handleKeys": {
     // "<C-a>": false,
     // "<C-f>": false,
@@ -162,31 +184,38 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["J"],
-      "after": ["5", "j"]
+      "after": ["5", "j"],
+      "silent": true
     },
     {
       "before": ["K"],
-      "after": ["5", "k"]
+      "after": ["5", "k"],
+      "silent": true
     },
     {
       "before": ["j"],
-      "after": ["g", "j"]
+      "after": ["g", "j"],
+      "silent": true
     },
     {
       "before": ["k"],
-      "after": ["g", "k"]
+      "after": ["g", "k"],
+      "silent": true
     },
     {
       "before": ["x"],
-      "after": ["\"", "_", "x"]
+      "after": ["\"", "_", "x"],
+      "silent": true
     },
     {
       "before": ["H"],
-      "after": ["^"]
+      "after": ["^"],
+      "silent": true
     },
     {
       "before": ["L"],
-      "after": ["$"]
+      "after": ["$"],
+      "silent": true
     },
     {
       "before": ["g", "["],
@@ -195,6 +224,10 @@
     {
       "before": ["g", "]"],
       "commands": ["editor.action.marker.nextInFiles"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
     {
       "before": ["leader", "w"],
@@ -207,6 +240,14 @@
     {
       "before": ["leader", "e"],
       "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["leader", "r", "o"],
+      "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": ["leader", "l", "s"],
+      "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
     },
     {
       "before": [":"],
@@ -242,6 +283,11 @@
       "before": ["leader", "t", "p"],
       "after": ["g", "T"]
     },
+    // toggle bool value
+    {
+      "before": ["<leader>", "t", "b"],
+      "commands": ["toggleBool.toggle"]
+    },
     // 水平分屏
     {
       "before": ["leader", "s", "h"],
@@ -266,6 +312,19 @@
     {
       "before": ["leader", "r", "r"],
       "commands": ["workbench.action.newWindowTab"]
+    },
+    // bookmarks extension
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["bookmarks.toggle"]
+    },
+    {
+      "before": ["<leader>", "<leader>", "m"],
+      "commands": ["bookmarks.toggleLabeled"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["bookmarks.list"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -284,6 +343,19 @@
     {
       "before": [">"],
       "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": ["leader", "f"],
+      "commands": ["editor.action.formatSelection"]
+    },
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"],
+      "silent": true
     }
   ],
   "vim.operatorPendingModeKeyBindingsNonRecursive": [
@@ -316,15 +388,5 @@
     "**/tmp": true,
     "**/yarn.lock": true
   },
-  /*
-   * other
-   */
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false
-  },
+  "window.zoomLevel": 1,
 }
-
-
