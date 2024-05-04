@@ -8,7 +8,7 @@
   },
   "workbench.sideBar.location": "right", // 侧边栏放在右边
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.editor.tabCloseButton": "left",
+  "workbench.editor.tabActionLocation": "left",
   "workbench.list.smoothScrolling": true,
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
