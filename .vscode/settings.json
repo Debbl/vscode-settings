@@ -15,14 +15,15 @@
   "workbench.commandPalette.experimental.suggestCommands": true,
   // "workbench.fontAliasing": "antialiased",
   "workbench.tree.enableStickyScroll": false,
+  "workbench.activityBar.location": "top",
 
   /*
    * window
    */
   "window.zoomLevel": 1,
-  "window.customTitleBarVisibility": "never",
   "window.dialogStyle": "custom",
   "window.nativeTabs": true,
+  "window.customTitleBarVisibility": "never",
   "http.proxy": "http://127.0.0.1:7890",
 
   /*
@@ -37,9 +38,13 @@
   "scm.diffDecorationsGutterWidth": 2,
   "terminal.integrated.smoothScrolling": true, // 查看文件树时不合并
 
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": true,
+
   /*
    * 编辑器
    */
+  // "editor.foldingStrategy": "indentation",
   "editor.stickyScroll.enabled": false,
   "explorer.confirmDelete": false, // 删除文件时是否确认
   "editor.hover.sticky": true,
@@ -56,6 +61,7 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 控制活动代码段是否阻止快速建议
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // 括号颜色
   "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
     "source.fixAll.eslint": "explicit", // eslint autoFix
     "source.organizeImports": "never"
   },
@@ -150,9 +156,6 @@
 
   // Color Highlight
   "color-highlight.markerType": "dot-before",
-
-  // rust-analyzer
-  "rust-analyzer.checkOnSave": false,
 
   // Vim
   "extensions.experimental.affinity": {
@@ -389,5 +392,5 @@
     "**/pnpm-lock.yaml": true,
     "**/tmp": true,
     "**/yarn.lock": true
-  },
+  }
 }
