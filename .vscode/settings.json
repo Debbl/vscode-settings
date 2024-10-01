@@ -14,17 +14,28 @@
   "workbench.tree.indent": 10,
   "workbench.commandPalette.experimental.suggestCommands": true,
   // "workbench.fontAliasing": "antialiased",
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.tsx": "${dirname} - page.tsx",
+    "**/app/**/layout.tsx": "${dirname} - layout.tsx"
+  },
   "workbench.tree.enableStickyScroll": false,
-  "workbench.activityBar.location": "top",
+
+  "scm.showHistoryGraph": false,
 
   /*
    * window
    */
+  // ==========  Global Level Config, needs to put in User Settings ========== 
+  "window.title": "${rootName}", // this make tabs more readable
+  "window.titleBarStyle": "custom",
+  "extensions.autoUpdate": "onlyEnabledExtensions",
   "window.zoomLevel": 1,
   "window.dialogStyle": "custom",
   "window.nativeTabs": true,
-  "window.customTitleBarVisibility": "never",
-  "http.proxy": "http://127.0.0.1:7890",
+  "http.proxy": "http://127.0.0.1:6152",
+
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": false,
 
   /*
    * 终端
@@ -34,7 +45,6 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.persistentSessionReviveProcess": "never",
-  "terminal.integrated.tabs.enabled": true,
   "scm.diffDecorationsGutterWidth": 2,
   "terminal.integrated.smoothScrolling": true, // 查看文件树时不合并
 
@@ -100,6 +110,7 @@
     "antd",
     "antfu",
     "Attributify",
+    "Axios",
     "Bilibili",
     "bumpp",
     "clsx",
@@ -127,7 +138,6 @@
   ],
   "prettier.quoteProps": "consistent",
   "eslint.format.enable": true,
-  // "eslint.experimental.useFlatConfig": true,
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
@@ -147,6 +157,8 @@
     "yml",
     "toml"
   ],
+
+  "unocss.disable": true,
 
   // Error Lens
   "errorLens.enabledDiagnosticLevels": ["error"],
@@ -169,12 +181,12 @@
   "vim.hlsearch": true,
   "vim.leader": "<space>",
   "vim.overrideCopy": true,
-  // "vim.visualstar": true,
+  "vim.visualstar": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 100,
   "vim.highlightedyank.color": "rgba(82, 146, 247, 0.4)",
   "vim.replaceWithRegister": true,
-  // "vim.flash.enable": true,
+  // "vim.sneak": true,
   "vim.handleKeys": {
     // "<C-a>": false,
     // "<C-f>": false,
@@ -187,16 +199,6 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["J"],
-      "after": ["5", "j"],
-      "silent": true
-    },
-    {
-      "before": ["K"],
-      "after": ["5", "k"],
-      "silent": true
-    },
     {
       "before": ["j"],
       "after": ["g", "j"],
@@ -254,14 +256,14 @@
       "before": ["leader", "l", "s"],
       "commands": ["workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"]
     },
-    {
-      "before": [":"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    {
-      "before": [";"],
-      "commands": ["workbench.action.quickOpen"]
-    },
+    // {
+    //   "before": [":"],
+    //   "commands": ["workbench.action.showCommands"]
+    // },
+    // {
+    //   "before": [";"],
+    //   "commands": ["workbench.action.quickOpen"]
+    // },
     {
       "before": ["leader", "t", "t"],
       "commands": ["workbench.action.terminal.toggleTerminal"]
@@ -376,13 +378,16 @@
   // #endregion
 
   "search.exclude": {
+    "**/*.snap": true,
+    "**/*.svg": true,
     "**/.git": true,
-    "**/.github": true,
+    "**/.github": false,
     "**/.nuxt": true,
     "**/.output": true,
     "**/.pnpm": true,
     "**/.vscode": true,
     "**/.yarn": true,
+    "**/assets": true,
     "**/bower_components": true,
     "**/dist/**": true,
     "**/logs": true,
@@ -390,7 +395,41 @@
     "**/out/**": true,
     "**/package-lock.json": true,
     "**/pnpm-lock.yaml": true,
-    "**/tmp": true,
-    "**/yarn.lock": true
-  }
+    "**/public": true,
+    "**/temp": true,
+    "**/yarn.lock": true,
+    "**/CHANGELOG*": true,
+    "**/LICENSE*": true,
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "never",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[plaintext]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
 }
+
