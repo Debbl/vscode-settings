@@ -14,6 +14,9 @@
     // vim
     "vscodevim.vim", // vim
     // 其他
+    "formulahendry.auto-rename-tag", // auto rename tag
+    "ritwickdey.LiveServer", // live server
+    "YoavBls.pretty-ts-errors", // ts error
     "alefragnani.project-manager", // project manger
     "CodeInChinese.EnglishChineseDictionary", // 翻译
     "streetsidesoftware.code-spell-checker", // 检查单词是否错误

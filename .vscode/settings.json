@@ -18,6 +18,7 @@
     "**/app/**/page.tsx": "${dirname} - page.tsx",
     "**/app/**/layout.tsx": "${dirname} - layout.tsx"
   },
+  "workbench.activityBar.location": "top",
   "workbench.tree.enableStickyScroll": false,
 
   "scm.showHistoryGraph": false,
@@ -25,7 +26,8 @@
   /*
    * window
    */
-  // ==========  Global Level Config, needs to put in User Settings ========== 
+  // ==========  Global Level Config, needs to put in User Settings ==========
+  "window.customTitleBarVisibility": "never",
   "window.title": "${rootName}", // this make tabs more readable
   "window.titleBarStyle": "custom",
   "extensions.autoUpdate": "onlyEnabledExtensions",
@@ -101,6 +103,28 @@
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
     "editor.inlayHints.enabled": "offUnlessPressed"
   },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[plaintext]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+
+  "diffEditor.ignoreTrimWhitespace": true,
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
 
   // #region 插件
   "cSpell.userWords": [
@@ -168,6 +192,14 @@
 
   // Color Highlight
   "color-highlight.markerType": "dot-before",
+
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
 
   // Vim
   "extensions.experimental.affinity": {
@@ -399,37 +431,9 @@
     "**/temp": true,
     "**/yarn.lock": true,
     "**/CHANGELOG*": true,
-    "**/LICENSE*": true,
+    "**/LICENSE*": true
   },
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
-  },
-  "github.copilot.editor.enableAutoCompletions": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false
-  },
-  "workbench.activityBar.location": "top",
-  "window.customTitleBarVisibility": "never",
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[plaintext]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "diffEditor.ignoreTrimWhitespace": true,
-  "gitlens.views.commitDetails.files.layout": "tree",
-  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
+  "liveServer.settings.donotVerifyTags": true
 }
+
 
