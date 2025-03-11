@@ -16,11 +16,24 @@
   // "workbench.fontAliasing": "antialiased",
   "workbench.editor.customLabels.patterns": {
     "**/app/**/page.tsx": "${dirname} - page.tsx",
-    "**/app/**/layout.tsx": "${dirname} - layout.tsx"
+    "**/app/**/layout.tsx": "${dirname} - layout.tsx",
+
+    "**/pages/**/index.page.tsx": "${dirname} - index.page.tsx",
+
+    "**/index.ts": "${dirname} - index.ts",
+    "**/index.tsx": "${dirname} - index.tsx"
   },
   "workbench.activityBar.location": "top",
   "workbench.tree.enableStickyScroll": false,
 
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on" // for tailwind classname
+  },
+  "custom-ui-style.stylesheet": {
+    ".quick-input-widget": "top: 25vh !important"
+  },
   "scm.showHistoryGraph": false,
 
   /*
@@ -34,7 +47,8 @@
   "window.zoomLevel": 1,
   "window.dialogStyle": "custom",
   "window.nativeTabs": true,
-  "http.proxy": "http://127.0.0.1:6152",
+  "http.proxy": "http://127.0.0.1:7890",
+  "http.proxyStrictSSL": true,
 
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
@@ -72,6 +86,7 @@
   "editor.showFoldingControls": "always", // 显示折叠图标
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 控制活动代码段是否阻止快速建议
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // 括号颜色
+  "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit", // eslint autoFix
@@ -83,7 +98,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontSize": 14,
   "editor.colorDecorators": false, // CSS 颜色
-  "editor.fontFamily": "'Monaspace Neon', 'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrains Mono NL', 'Monaspace Neon', Menlo, Monaco, 'Courier New', monospace",
   // "editor.formatOnSaveMode": "modificationsIfAvailable",
   // "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.smoothScrolling": true,
@@ -218,6 +233,11 @@
   "vim.highlightedyank.duration": 100,
   "vim.highlightedyank.color": "rgba(82, 146, 247, 0.4)",
   "vim.replaceWithRegister": true,
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+
   // "vim.sneak": true,
   "vim.handleKeys": {
     // "<C-a>": false,
@@ -337,6 +357,10 @@
       "commands": ["workbench.action.splitEditorDown"]
     },
     {
+      "before": ["leader", "s", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
       "before": ["leader", "r", "n"],
       "commands": ["editor.action.rename"]
     },
@@ -433,7 +457,9 @@
     "**/CHANGELOG*": true,
     "**/LICENSE*": true
   },
-  "liveServer.settings.donotVerifyTags": true
+  "liveServer.settings.donotVerifyTags": true,
+  "typescript.tsserver.maxTsServerMemory": 8192
 }
+
 
 

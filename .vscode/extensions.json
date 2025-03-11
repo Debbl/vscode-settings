@@ -17,10 +17,12 @@
     "formulahendry.auto-rename-tag", // auto rename tag
     "ritwickdey.LiveServer", // live server
     "YoavBls.pretty-ts-errors", // ts error
-    "alefragnani.project-manager", // project manger
     "CodeInChinese.EnglishChineseDictionary", // 翻译
     "streetsidesoftware.code-spell-checker", // 检查单词是否错误
     "usernamehw.errorlens", // error lens
-    "naumovs.color-highlight" // color-highlight
+    "naumovs.color-highlight", // color-highlight
+    "subframe7536.custom-ui-style", // custom ui style
+    "antfu.pnpm-catalog-lens",
+    "ChakrounAnas.turbo-console-log",
   ]
 }
