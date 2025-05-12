@@ -21,7 +21,7 @@
     "streetsidesoftware.code-spell-checker", // 检查单词是否错误
     "usernamehw.errorlens", // error lens
     "naumovs.color-highlight", // color-highlight
-    "subframe7536.custom-ui-style", // custom vscode ui style
+    "subframe7536.custom-ui-style", // custom vscode vscode ui style
     "antfu.pnpm-catalog-lens",
     "ChakrounAnas.turbo-console-log",
   ]

@@ -90,13 +90,13 @@
   {
     "key": "r",
     "command": "renameFile",
-    "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   // 删除文件或目录
   {
     "key": "d",
     "command": "deleteFile",
-    "when": " explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus "
   },
   // 剪切文件或目录
   {
@@ -115,5 +115,21 @@
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
   }
+
+  // vim
+  // {
+  //   "key": "ctrl+j",
+  //   "command": "editor.action.moveLinesDownAction",
+  //   "when": "editorTextFocus && !findWidgetVisible && !suggestWidgetVisible && !suggestWidgetMultipleSuggestions && vim.mode == 'Normal'"
+  // }
+  // {
+  //   "key": "ctrl+k",
+  //   "command": "editor.action.moveLinesUpAction",
+  //   "when": "editorTextFocus && focusedView == 'workbench.panel.output.visible' && !findWidgetVisible && !suggestWidgetVisible && !suggestWidgetMultipleSuggestions && vim.mode == 'Normal"
+  // }
 ]
